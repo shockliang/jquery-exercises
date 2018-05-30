@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>First jQuery</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $("document").ready(function () {
+
+            $("#grow").click(() => {
+                $("#textBox").animate({ width: "500px" }, 1000);
+            });
+
+            $("#move").click(() => {
+                $("#textBox").animate({ marginLeft: "200px" }, 1000);
+            });
+
+            $("#bigger").click(() => {
+                $("#textBox").animate({ fontSize: "40px" }, 3000);
+            });
+
+            $("#many").click(() => {
+                $("#textBox").animate({ fontSize: "40px", marginLeft: "400px", width: "700px" }, 2000);
+            });
+
+        });
+    </script>
+    <style>
+        #textBox {
+            width: 200px;
+            height: 450px;
+            background-color: #ccc;
+            position: absolute;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" id="grow">Grow</a> |
+    <a href="#" id="move">Move</a> |
+    <a href="#" id="bigger">Bigger</a> |
+    <a href="#" id="many">Many Things</a>
+    <div id="textBox">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</body>
+
+</html>
